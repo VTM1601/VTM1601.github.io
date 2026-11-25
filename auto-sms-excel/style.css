@@ -1,0 +1,12 @@
+:root { color-scheme: light dark; --fg: #16201e; --muted: #50605c; --bg: #f5faf8; --accent: #2b6a60; }
+/* On the web the page follows the browser; inside the app the app adds class="light" or "dark". */
+@media (prefers-color-scheme: dark) { :root:not(.light) { --fg: #e1ebe8; --muted: #a8b8b3; --bg: #101615; --accent: #8fd3c5; } }
+:root.dark { color-scheme: dark; --fg: #e1ebe8; --muted: #a8b8b3; --bg: #101615; --accent: #8fd3c5; }
+:root.light { color-scheme: light; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 20px 16px 48px; }
+h1 { font-size: 1.6em; line-height: 1.25; margin: 0 0 4px; }
+h2 { font-size: 1.15em; margin: 28px 0 8px; }
+.meta { color: var(--muted); font-size: .9em; margin: 0 0 20px; }
+a { color: var(--accent); }
+ul { padding-left: 1.3em; }
